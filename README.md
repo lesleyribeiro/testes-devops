@@ -6,7 +6,6 @@ Esse projeto foi criado para o desafio de DevOps, com o objetivo de configurar u
 ## Como baixar e utilizar o código
 - Clone o repositório.
 - Vá até o diretório environment/dev.
-- Confira e ajuste as variáveis no arquivo variables.tf.
 - Execute **terraform init** para preparar o ambiente e iniciar os módulos.
 - Execute **terraform plan** para ver o que será criado.
 - Execute **terraform apply** para criar a infraestrutura.
