@@ -1,14 +1,11 @@
-<<<<<<< HEAD
-.terraform/
-*.tfstate
-*.tfstate.backup
-=======
 # Local .terraform directories
+.terraform/
 **/.terraform/*
 
 # .tfstate files
 *.tfstate
 *.tfstate.*
+*.tfstate.backup
 
 # Crash log files
 crash.log
@@ -16,4 +13,3 @@ crash.log
 # Ignore .terraformrc and override files
 .terraformrc
 terraform.rc
->>>>>>> e64c8aa (Adicionando o diretório modules)
