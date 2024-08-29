@@ -199,13 +199,13 @@ resource "aws_eks_node_group" "desafio_nodegroup" {
   tags = local.tags
 
   depends_on = [
-    module.eks
+    module.eks,  # Garante que o módulo EKS esteja completo antes de criar o Node Group
   ]
+
 }
 
 # Associação do Auto Scaling Group ao Target Group do Load Balancer, garantindo que as instâncias do node group recebam tráfego.
 resource "aws_autoscaling_attachment" "asg_attachment" {
-  depends_on = [aws_eks_node_group.desafio_nodegroup] 
   autoscaling_group_name = aws_eks_node_group.desafio_nodegroup.resources[0].autoscaling_groups[0].name
   lb_target_group_arn    = aws_lb_target_group.desafio_target_group.arn
 }

@@ -8,15 +8,18 @@ module "eks" {
 
   # Configuração dos addons do EKS, garantindo que as versões mais recentes dos addons coredns, kube-proxy e vpc-cni sejam instaladas.
   cluster_addons = {
-    coredns = {
-      most_recent = true
-    }
+    #coredns = {
+    #  most_recent = true
+    #}
     kube-proxy = {
       most_recent = true
     }
     vpc-cni = {
       most_recent = true
     }
+
+
+
   }
 
   # IDs da VPC e subnets que serão utilizadas pelo cluster EKS, incluindo as subnets do plano de controle.
